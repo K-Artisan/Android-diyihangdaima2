@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:text="@string/fa_tv_name" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fa_btn_name" />
+
+    <Button
+        android:id="@+id/button1_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fa_btn_name_3" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:autofillHints="" />
+
+
+    <Button
+        android:id="@+id/btn_AlertDialog"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog" />
+
+    <Button
+        android:id="@+id/btn_ProgressDialog"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressDialog" />
+
+    <ProgressBar
+        android:id="@+id/pg_progressBarDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <ProgressBar
+        android:id="@+id/pg_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:progressBarStyleHorizontal"
+        android:visibility="gone"
+        android:max="100"
+        />
+    <Button
+        android:id="@+id/btn_ProgressBar"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ProgressBar+" />
+
+</LinearLayout>

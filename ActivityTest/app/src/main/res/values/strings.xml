@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ActivityTest</string>
+    <string name="fa_btn_name">第2个Activity</string>
+    <string name="fa_tv_name">我是个视图View</string>
+    <string name="additem">添加item</string>
+    <string name="removeItem">删除item</string>
+    <string name="fa_btn_name_3">第3个Activity</string>
+</resources>
