@@ -16,14 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     private MyDatabaseHelper dbHepler;
     private static final String DataBaseName = "BookStore.db";
-    private static int DataBaseVersion = 3;
+    public static int DataBaseVersion = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //获取 SQLiteOpenHelper 实例
+        //获取 SQLiteOpenHelper 实例，以便操作数据库
         dbHepler = new MyDatabaseHelper(this, DataBaseName, null, DataBaseVersion);
 
         Button btn_createDatabase = findViewById(R.id.btn_createDatabase);
@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
                         , new String[]{"BBB","Jack", "80.55","100" });
             }
         });
+
 
         //使用SQL查询
         Button btn_query_sql = findViewById(R.id.btn_query_sql);
