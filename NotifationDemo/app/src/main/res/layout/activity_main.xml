@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button android:id="@+id/btn_send_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送通知（小于Android 8.0）"/>
+
+    <Button android:id="@+id/btn_send_notification_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送渠道通知：聊天类别"/>
+
+    <Button android:id="@+id/btn_send_notification_subcribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送渠道通知：订阅类别"/>
+
+</LinearLayout>
