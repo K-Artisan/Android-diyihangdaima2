@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         .setSmallIcon(R.mipmap.ic_launcher) //小图标
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher_round)) //大图标
                         .setContentIntent(pendingIntent)//点击通知的响应动作
+                        .setAutoCancel(true) //设置点击通知后自动删除通知
                         .build();
 
                 //发送通知：
