@@ -1,5 +1,6 @@
 package com.example.notifationdemo;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
@@ -120,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAutoCancel(true) //设置点击通知后自动删除通知
                         .setContentIntent(pendingIntent)//点击通知的响应动作
                         .build();
+
                 manager.notify(AppConstant.NotificationId_Subcribe, notification);
             }
         });
@@ -136,10 +138,28 @@ public class MainActivity extends AppCompatActivity {
             int importance = NotificationManager.IMPORTANCE_HIGH;
             createNotificationChannel(AppConstant.ChannelId_Chat, channelName, importance);
 
-            channelName = "订阅消息";
+/*            channelName = "订阅消息";
             importance = NotificationManager.IMPORTANCE_DEFAULT;
-            createNotificationChannel(AppConstant.ChannelId_Subcribe, channelName, importance);
+            createNotificationChannel(AppConstant.ChannelId_Subcribe, channelName, importance);*/
+            initNotificationChannelForSubcribe();
         }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void initNotificationChannelForSubcribe(){
+        String channelName = "订阅消息";
+        String description = "订阅消息，接收一些日常刚兴趣的资讯！！！";
+        int importance = NotificationManager.IMPORTANCE_HIGH;
+
+        NotificationChannel channel = new NotificationChannel(AppConstant.ChannelId_Subcribe, channelName, importance);
+        channel.enableVibration(true);
+        channel.setVibrationPattern(new long[]{0, 1000,2000, 3000, 5000, 2000,2000,1000 } );
+        channel.enableLights(true);
+        channel.setLightColor(Color.GREEN);
+        channel.setSound(Uri.fromFile(new File("/system/media/audio/ringtones/Luna.ogg")); //通知声音
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.createNotificationChannel(channel);
     }
 
     /**
