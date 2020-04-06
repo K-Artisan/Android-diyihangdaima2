@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@mipmap/icon_phone"
+            android:title="电话" />
+
+        <item
+            android:id="@+id/nav_friend"
+            android:icon="@mipmap/icon_addressbook"
+            android:title="好友" />
+
+        <item
+            android:id="@+id/nav_loaction"
+            android:icon="@mipmap/icon_location_48_48"
+            android:title="定位" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@mipmap/icon_mail"
+            android:title="邮箱" />
+
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@mipmap/icon_task"
+            android:title="任务" />
+    </group>
+</menu>
